@@ -29,4 +29,19 @@ const router = createRouter({
   routes
 })
 
+//导航守卫
+router.beforeEach((to, from,next)=>{
+  console.log(to)
+  console.log(from)
+  if (to.path == '/login'){
+    return next();//如果访问登陆页面，正常跳转，因为登陆页面不需要认证
+  }
+  const token='' //模拟从本地session获取
+  if (token){
+    next(); //如果有token,正常跳转访问
+  }else {
+    return next('/login');
+  }
+})
+
 export default router
