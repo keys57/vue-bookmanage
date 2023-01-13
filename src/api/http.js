@@ -5,4 +5,13 @@ const instance = axios.create({
     timeout:5000
 })
 
+//请求拦截器
+instance.interceptors.request.use(config=>{
+    config.headers['testhaeders'] = '123456'
+})
+
+//响应拦截器
+instance.interceptors.response.use(response=>{
+    response.headers['testhaeders'] = '123456'
+})
 export default instance
