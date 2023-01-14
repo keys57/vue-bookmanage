@@ -30,6 +30,11 @@ const routes = [
     path: '/button', //访问路径
     name:'button', //路由名称
     component: () => import('../views/button.vue') //引用组件
+  },
+  {
+    path: '/card', //访问路径
+    name:'card', //路由名称
+    component: () => import('../views/card.vue') //引用组件
   }
 ]
 
