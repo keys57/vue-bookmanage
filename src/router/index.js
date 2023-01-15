@@ -40,6 +40,11 @@ const routes = [
     path: '/container', //访问路径
     name:'container', //路由名称
     component: () => import('../views/container.vue') //引用组件
+  },
+  {
+    path: '/menu', //访问路径
+    name:'menu', //路由名称
+    component: () => import('../views/menu.vue') //引用组件
   }
 ]
 

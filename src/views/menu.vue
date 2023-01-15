@@ -1,10 +1,5 @@
 <template>
-    <div class="common-layout">
-      <el-container>
-        <el-header>Header</el-header>
-        <el-container>
-          <el-aside width="200px">
-            <el-menu
+      <el-menu
         active-text-color="#ffd04b"
         background-color="#545c64"
         class="el-menu-vertical-demo"
@@ -40,35 +35,4 @@
           <span>Navigator Four</span>
         </el-menu-item>
       </el-menu>
-          </el-aside>
-          <el-container>
-            <el-main>Main</el-main>
-            <el-footer>Footer</el-footer>
-          </el-container>
-        </el-container>
-      </el-container>
-    </div>
-  </template>
-
-<style>
-    .el-container {
-        height: 100vh;
-    }
-    .el-header {
-        text-align: center;
-        background-color: aqua;
-    }
-    .el-aside {
-        text-align: center;
-        background-color: aquamarine;
-    }
-    .el-main {
-        text-align: center;
-        background-color: bisque;
-    }
-    .el-footer {
-        text-align: center;
-        background-color:blue
-    }
-</style>
-  
+</template>
