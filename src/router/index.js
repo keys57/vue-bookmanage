@@ -35,6 +35,11 @@ const routes = [
     path: '/card', //访问路径
     name:'card', //路由名称
     component: () => import('../views/card.vue') //引用组件
+  },
+  {
+    path: '/container', //访问路径
+    name:'container', //路由名称
+    component: () => import('../views/container.vue') //引用组件
   }
 ]
 
