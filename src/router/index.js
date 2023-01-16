@@ -45,6 +45,11 @@ const routes = [
     path: '/menu', //访问路径
     name:'menu', //路由名称
     component: () => import('../views/menu.vue') //引用组件
+  },
+  {
+    path: '/form', //访问路径
+    name:'form', //路由名称
+    component: () => import('../views/form.vue') //引用组件
   }
 ]
 
