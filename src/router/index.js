@@ -50,6 +50,11 @@ const routes = [
     path: '/form', //访问路径
     name:'form', //路由名称
     component: () => import('../views/form.vue') //引用组件
+  },
+  {
+    path: '/upload', //访问路径
+    name:'upload', //路由名称
+    component: () => import('../views/upload.vue') //引用组件
   }
 ]
 
