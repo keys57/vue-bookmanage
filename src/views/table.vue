@@ -1,6 +1,6 @@
 <template>
     <el-card shadow="never" :body-style="{padding:'0px'}">
-        <el-table :data="tableData" style="width: 100%">
+        <el-table highlight-current-row @current-change="handleSelection" :data="tableData" style="width: 100%">
             <el-table-column prop="date" label="Date" width="180" />
             <el-table-column prop="name" label="Name" width="180" />
             <el-table-column prop="address" label="Address" />
@@ -34,6 +34,12 @@ export default {
                     address: 'No. 189, Grove St, Los Angeles',
                 },
             ]
+        }
+    },
+    methods:{
+        handleSelection(currentRow,oldCurrentRow){
+            console.log("currentRow",currentRow)
+            console.log("oldCurrentRow",oldCurrentRow)
         }
     }
 }
