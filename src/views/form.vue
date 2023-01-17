@@ -38,6 +38,12 @@
 <script>
 export default {
     data() {
+        //自定义校验规则
+        var validateName = (rule,value,callbak) => {
+            if (value != 'aaa'){
+                callbak(new Error("名称不是aaa"))
+            }
+        }
         return {
             form: {
                 name: '',
@@ -48,9 +54,10 @@ export default {
             //表单验证规则
             rules: {
                 name: [
-                    { required: true, message: "请输入名称", trigger: 'blur' },
-                    { min: 3, max: 5, message: 'Length should be 3 to 5', trigger: 'blur' },
-
+                    //{ required: true, message: "请输入名称", trigger: 'blur' },
+                    //{ min: 3, max: 5, message: 'Length should be 3 to 5', trigger: 'blur' },
+                    //引用自定义校验规则
+                    {validator: validateName,trigger :'blur'}
                 ],
                 region: [
                     { required: true, message: "请选择地区", trigger: 'blur' }
