@@ -56,6 +56,12 @@ const routes = [
     name:'upload', //路由名称
     component: () => import('../views/upload.vue') //引用组件
   }
+  ,
+  {
+    path: '/table', //访问路径
+    name:'table', //路由名称
+    component: () => import('../views/table.vue') //引用组件
+  }
 ]
 
 //创建路由实例

@@ -1,7 +1,13 @@
 <template>
     <el-upload v-model:file-list="fileList" class="upload-demo"
-        action="https://run.mocky.io/v3/9d059bf9-4660-45f2-925d-ce80ad6c4d15" multiple :on-preview="handlePreview"
-        :on-remove="handleRemove" :before-remove="beforeRemove" :limit="3" :on-exceed="handleExceed">
+        action="http://localhost:8000/api/v1/upload" 
+        multiple 
+        :on-preview="handlePreview"
+        :on-remove="handleRemove" 
+        :before-remove="beforeRemove" 
+        :limit="3" 
+        list-type="picture"
+        :on-exceed="handleExceed">
         <el-button type="primary">Click to upload</el-button>
         <template #tip>
             <div class="el-upload__tip">
