@@ -1,13 +1,13 @@
 <template>
     <el-card shadow="never" :body-style="{padding:'0px'}">
         <el-table 
-        highlight-current-row
-        @current-change="handleSelection" 
+        @selection-change="handleSelection" 
         :data="tableData" 
         style="width: 100%">
-            <el-table-column prop="date" label="Date" width="180" sortable/>
+            <el-table-column type="selection" />
+            <el-table-column prop="date" label="Date" width="180" />
             <el-table-column prop="name" label="Name" width="180" />
-            <el-table-column prop="address" label="Address" sortable />
+            <el-table-column prop="address" label="Address" />
         </el-table>
     </el-card>
 </template>
@@ -41,9 +41,9 @@ export default {
         }
     },
     methods:{
-        handleSelection(currentRow,oldCurrentRow){
-            console.log("currentRow",currentRow)
-            console.log("oldCurrentRow",oldCurrentRow)
+        handleSelection(rows){
+            console.log(rows)
+
         }
     }
 }

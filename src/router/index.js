@@ -61,7 +61,13 @@ const routes = [
     path: '/table', //访问路径
     name:'table', //路由名称
     component: () => import('../views/table.vue') //引用组件
+  },
+  {
+    path: '/multi_selection', //访问路径
+    name:'multi_selection', //路由名称
+    component: () => import('../views/multi_selection.vue') //引用组件
   }
+
 ]
 
 //创建路由实例
