@@ -66,6 +66,11 @@ const routes = [
     path: '/multi_selection', //访问路径
     name:'multi_selection', //路由名称
     component: () => import('../views/multi_selection.vue') //引用组件
+  },
+  {
+    path: '/search', //访问路径
+    name:'search', //路由名称
+    component: () => import('../views/search.vue') //引用组件
   }
 
 ]
